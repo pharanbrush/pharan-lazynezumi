@@ -3,7 +3,7 @@
 	<version>1</version>
 	<code>len = normalize(dx, dy);
 angle = atan2(dy, dx) * 180 / pi;
-nearAngle = floor(angle / angleInc + 0.5) * angleInc * pi / 180;
+nearAngle = floor(angle / angleSnap + 0.5) * angleSnap * pi / 180;
 
 dotscale = sign(dotoffset + sin(d * dotfrequency));
 
@@ -13,8 +13,8 @@ oy = oy + sin(nearAngle) * len;
 </code>
 	<params>
 		<param>
-			<name>angleInc</name>
-			<defaultVal>45</defaultVal>
+			<name>angleSnap</name>
+			<defaultVal>90</defaultVal>
 			<minVal>0</minVal>
 			<maxVal>90</maxVal>
 			<decimals>0</decimals>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>scale = sign(offset + sin(d * freq));
+op = p * max(minVal, scale);</code>
+	<params>
+		<param>
+			<name>freq</name>
+			<defaultVal>0.250</defaultVal>
+			<minVal>0.0</minVal>
+			<maxVal>0.5</maxVal>
+			<decimals>3</decimals>
+		</param>
+		<param>
+			<name>minVal</name>
+			<defaultVal>0.0</defaultVal>
+			<minVal>0.0</minVal>
+			<maxVal>1.0</maxVal>
+			<decimals>3</decimals>
+		</param>
+		<param>
+			<name>offset</name>
+			<defaultVal>0.0</defaultVal>
+			<minVal>-1.0</minVal>
+			<maxVal>1.0</maxVal>
+			<decimals>2</decimals>
+		</param>
+	</params>
+</distortionPreset>

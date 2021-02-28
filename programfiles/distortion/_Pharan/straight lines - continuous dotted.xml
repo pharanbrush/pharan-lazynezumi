@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>len = normalize(dx, dy);
+angle = atan2(dy, dx) * 180 / pi;
+nearAngle = floor(angle / angleInc + 0.5) * angleInc * pi / 180;
+
+dotscale = sign(dotoffset + sin(d * dotfrequency));
+
+op = p * max(1 - dotted, dotscale);
+ox = ox + cos(nearAngle) * len;
+oy = oy + sin(nearAngle) * len;
+</code>
+	<params>
+		<param>
+			<name>angleInc</name>
+			<defaultVal>45</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>90</maxVal>
+			<decimals>0</decimals>
+		</param>
+		<param>
+			<name>dotfrequency</name>
+			<defaultVal>0.400</defaultVal>
+			<minVal>0.0</minVal>
+			<maxVal>0.5</maxVal>
+			<decimals>3</decimals>
+		</param>
+		<param>
+			<name>dotoffset</name>
+			<defaultVal>0.0</defaultVal>
+			<minVal>-1.0</minVal>
+			<maxVal>1.0</maxVal>
+			<decimals>2</decimals>
+		</param>
+		<param>
+			<name>dotted</name>
+			<defaultVal>1</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+			<decimals>0</decimals>
+		</param>
+	</params>
+</distortionPreset>

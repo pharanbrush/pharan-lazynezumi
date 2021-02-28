@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>sz = scaleWithPressure == 1 ? p : 1;
+twopid = 2*pi*d;
+s1 = sin(twopid/period1);
+s2 = sin(twopid/period2);
+s3 = sin(twopid/period3);
+offset = sz * (amplitude * (s1 + s2 + s3));
+ox = x + nx * offset;
+oy = y + ny * offset;</code>
+	<params>
+		<param>
+			<name>period1</name>
+			<defaultVal>70</defaultVal>
+			<minVal>10</minVal>
+			<maxVal>500</maxVal>
+			<decimals>0</decimals>
+		</param>
+		<param>
+			<name>period2</name>
+			<defaultVal>170</defaultVal>
+			<minVal>10</minVal>
+			<maxVal>500</maxVal>
+			<decimals>0</decimals>
+		</param>
+		<param>
+			<name>period3</name>
+			<defaultVal>200</defaultVal>
+			<minVal>10</minVal>
+			<maxVal>500</maxVal>
+			<decimals>0</decimals>
+		</param>
+		<param>
+			<name>amplitude</name>
+			<defaultVal>0.25</defaultVal>
+			<minVal>-1.5</minVal>
+			<maxVal>1.5</maxVal>
+			<decimals>2</decimals>
+		</param>		
+		<param>
+			<name>scaleWithPressure</name>
+			<defaultVal>0</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+			<decimals>0</decimals>
+		</param>
+	</params>
+</distortionPreset>

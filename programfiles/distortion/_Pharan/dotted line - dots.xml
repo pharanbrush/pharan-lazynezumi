@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>scale = sign(dotoffset + sin(d * dotfrequency));
+op = p * max(0, scale);</code>
+	<params>
+		<param>
+			<name>dotfrequency</name>
+			<defaultVal>0.400</defaultVal>
+			<minVal>0.0</minVal>
+			<maxVal>0.5</maxVal>
+			<decimals>3</decimals>
+		</param>
+		<param>
+			<name>dotoffset</name>
+			<defaultVal>0.0</defaultVal>
+			<minVal>-1.0</minVal>
+			<maxVal>1.0</maxVal>
+			<decimals>2</decimals>
+		</param>
+	</params>
+</distortionPreset>

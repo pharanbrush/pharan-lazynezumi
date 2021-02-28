@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>doNoise = (rand() &lt; noiseProbability);
+gain = size * mix(1, p, pressureSensitivity);
+ox = x + (doNoise ? srand() * gain : 0);
+oy = y + (doNoise ? srand() * gain : 0);</code>
+	<params>
+		<param>
+			<name>noiseProbability</name>
+			<defaultVal>0.5</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+		</param>
+		<param>
+			<name>size</name>
+			<defaultVal>10</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>50</maxVal>
+			<decimals>0</decimals>
+		</param>
+		<param>
+			<name>pressureSensitivity</name>
+			<defaultVal>1</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+		</param>
+	</params>
+</distortionPreset>

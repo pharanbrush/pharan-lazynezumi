@@ -18,18 +18,18 @@ There are already subfolders inside the `distortion` folder for each category. M
 
 ## Pharan's LNP Scripts
 ### dotted line
-![](docimg/scripts-dotted-line.gif)
-Use **dotted line** to make dotted lines.
+![](docimg/scripts-dotted-line.gif)  
+Use **dotted line** to make dotted lines.  
 > This requires the brush to respond to pen pressure.
 > LNP or your drawing program may apply some pressure smoothing so drawing too quickly may yield incorrect results.
 
 
 ### wobble - jagged
-![](docimg/scripts-wobble-jagged.gif)
+![](docimg/scripts-wobble-jagged.gif)  
 Use **wobble** to mimic drawing on an uneven surface.
 
-### 
-![](docimg/scripts-unstraighten-slightwobble.gif)
+### unstraighten - slight wobble
+![](docimg/scripts-unstraighten-slightwobble.gif)  
 Use **unstraighten** to add a slight wobble to lines and shapes.
 
 

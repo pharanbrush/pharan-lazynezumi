@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>waveOut = ((triangle(d/period)) + 1) * 0.5;
+pscale = waveOut &gt; percentGap ? 1 : minPressureScale;
+op = p * pscale;</code>
+	<params>
+		<param>
+			<name>period</name>
+			<tooltip>Pixel distance before the pattern repeats.</tooltip>
+			<defaultVal>30.0</defaultVal>
+			<minVal>10.0</minVal>
+			<maxVal>500.0</maxVal>
+			<decimals>0</decimals>
+		</param>
+		<param>
+			<name>percentGap</name>
+			<tooltip>Ratio between the gap and the line. A larger value means a wider gap.</tooltip>
+			<defaultVal>0.7</defaultVal>
+			<minVal>0.0</minVal>
+			<maxVal>1.0</maxVal>
+			<decimals>2</decimals>
+		</param>
+		<param>
+			<name>minPressureScale</name>
+			<tooltip>Minimum pressure scale value, used in the gaps.</tooltip>
+			<defaultVal>0.0</defaultVal>
+			<minVal>0.0</minVal>
+			<maxVal>1.0</maxVal>
+			<decimals>2</decimals>
+		</param>
+	</params>
+</distortionPreset>

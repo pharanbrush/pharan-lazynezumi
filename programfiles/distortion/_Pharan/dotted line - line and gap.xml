@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>period = line + gap;
+percent = gap / period;
+wave = ((triangle(d/period)) + 1) * 0.5;
+pscale = wave &gt; percent ? 1 : minPressureScale;
+op = p * pscale;</code>
+	<params>
+		<param>
+			<name>line</name>
+			<defaultVal>15</defaultVal>
+			<minVal>1</minVal>
+			<maxVal>200</maxVal>
+			<decimals>0</decimals>
+			<color/>
+			<toolTip>Pixel length of the line portion.</toolTip>
+		</param>
+		<param>
+			<name>gap</name>
+			<defaultVal>20</defaultVal>
+			<minVal>1</minVal>
+			<maxVal>200</maxVal>
+			<decimals>0</decimals>
+			<color/>
+			<toolTip>Pixel length of gaps.</toolTip>
+		</param>
+		<param>
+			<name>minPressureScale</name>
+			<defaultVal>0</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+			<decimals>2</decimals>
+			<color/>
+			<toolTip>Minimum pressure scale value, used in the gaps.</toolTip>
+		</param>
+	</params>
+</distortionPreset>

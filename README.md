@@ -21,7 +21,7 @@ For example: `<iconfolder>icons/yournewiconpackfolder</iconfolder>` .
 Save the file. You may need to close and open LNP again for it to fully take effect.
 
 ## Pharan's LNP Icon Set
-![](docimg/iconset-pharan.png)
+![](docimg/iconset-pharan.png)  
 It looks like this.  
 
 

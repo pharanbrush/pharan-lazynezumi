@@ -20,7 +20,7 @@ There are already subfolders inside the `distortion` folder for each category. M
 ### dotted line
 ![](docimg/scripts-dotted-line.gif)  
 Use **dotted line** to make dotted lines.  
-> This requires the brush to respond to pen pressure.
+> This requires your brush to respond to pen pressure. If the brush still draws at near-zero pressure, lines will be drawn in the gaps accordingly.  
 > LNP or your drawing program may apply some pressure smoothing so drawing too quickly may yield incorrect results.
 
 

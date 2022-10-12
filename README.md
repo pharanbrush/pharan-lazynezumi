@@ -2,6 +2,29 @@
 Some customization and scripts I made for Lazy Nezumi Pro (LNP)
 
 
+# Icon Set
+## How to install an icon set to LNP
+As of **Lazy Nezumi Pro Version 22.10.05.2045**:
+
+Each icon set is a folder containing png files for each icon.
+
+Copy the folder containing the icon pngs into the folder named `icons` inside the LNP install folder.
+
+By default, this is `C:\Program Files (x86)\Lazy Nezumi Pro\icons\` .
+
+In the main window of Lazy Nezumi Pro, choose `Settings > Toolbar Settings > Edit toolbar.xml`. This will open the settings file in your text editor. 
+
+Change the value inside the `<iconfolder>` tag to the folder you want.
+
+For example: `<iconfolder>icons/yournewiconpackfolder</iconfolder>` .
+
+Save the file. You may need to close and open LNP again for it to fully take effect.
+
+## Pharan's LNP Icon Set
+![](docimg/iconset-pharan.png)
+It looks like this.  
+
+
 # Scripts
 ## How to install scripts in LNP
 As of **Lazy Nezumi Pro Version 22.10.05.2045**:

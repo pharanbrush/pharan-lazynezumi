@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <distortionPreset>
 	<version>1</version>
-	<code>pscale = d &lt; inkBlobRun ? (1 + inkBlobStrength) : 1;
-doBlobRandom = fmod(sx + sy, 10) &gt; 7;
-pscale = doBlobRandom ? pscale : 1;
+	<code>doBlobThisStroke = strokeStarted ? doBlobThisStroke : rand() &lt; blobProbability;
+strokeBlobFactor = strokeStarted ? strokeBlobFactor : rand();
+strokeBlobLength = strokeStarted ? strokeBlobLength : inkBlobRun - (rand() * (inkBlobRun * 0.4));
+
+strokeStarted = true;
+
+isBlobStart = d &lt; strokeBlobLength;
+pscale = isBlobStart ? (1 + (inkBlobStrength * strokeBlobFactor)) : 1;
+pscale = doBlobThisStroke ? pscale : 1;
 op = p * pscale;
 
 
@@ -15,7 +21,7 @@ oy = y + noiseY;</code>
 	<params>
 		<param>
 			<name>noiseAmplitude</name>		
-			<defaultVal>3</defaultVal>
+			<defaultVal>2</defaultVal>
 			<minVal>0</minVal>
 			<maxVal>20</maxVal>
 			<decimals>0</decimals>
@@ -32,7 +38,7 @@ oy = y + noiseY;</code>
 			<toolTip/>
 		</param>
 		<param>
-			<name>inkBlobRun</name>
+			<name>inkBlobRun</name>		
 			<defaultVal>15</defaultVal>
 			<minVal>0</minVal>
 			<maxVal>20</maxVal>
@@ -41,11 +47,20 @@ oy = y + noiseY;</code>
 			<toolTip/>
 		</param>
 		<param>
-			<name>inkBlobStrength</name>		
-			<defaultVal>2</defaultVal>
+			<name>inkBlobStrength</name>
+			<defaultVal>3</defaultVal>
 			<minVal>0</minVal>
 			<maxVal>8</maxVal>
 			<decimals>1</decimals>
+			<color/>
+			<toolTip/>
+		</param>
+		<param>
+			<name>blobProbability</name>		
+			<defaultVal>0.2</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+			<decimals>2</decimals>
 			<color/>
 			<toolTip/>
 		</param>

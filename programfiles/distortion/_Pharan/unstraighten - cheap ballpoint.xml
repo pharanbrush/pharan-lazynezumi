@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>pscale = d &lt; inkBlobRun ? (1 + inkBlobStrength) : 1;
+doBlobRandom = fmod(sx + sy, 10) &gt; 7;
+pscale = doBlobRandom ? pscale : 1;
+op = p * pscale;
+
+
+eAmplitude = noiseAmplitude * ((noise(d * 0.5) + 1) * 0.5);
+noiseX = noise(d * noiseFrequencyScale) * eAmplitude;
+noiseY = 0.5 * noise(d * noiseFrequencyScale + 2) * eAmplitude;
+ox = x + noiseX;
+oy = y + noiseY;</code>
+	<params>
+		<param>
+			<name>noiseAmplitude</name>		
+			<defaultVal>3</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>20</maxVal>
+			<decimals>0</decimals>
+			<color/>
+			<toolTip/>
+		</param>
+		<param>
+			<name>noiseFrequencyScale</name>		
+			<defaultVal>2</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>3</maxVal>
+			<decimals>1</decimals>
+			<color/>
+			<toolTip/>
+		</param>
+		<param>
+			<name>inkBlobRun</name>
+			<defaultVal>15</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>20</maxVal>
+			<decimals>0</decimals>
+			<color/>
+			<toolTip/>
+		</param>
+		<param>
+			<name>inkBlobStrength</name>		
+			<defaultVal>2</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>8</maxVal>
+			<decimals>1</decimals>
+			<color/>
+			<toolTip/>
+		</param>
+	</params>
+</distortionPreset>

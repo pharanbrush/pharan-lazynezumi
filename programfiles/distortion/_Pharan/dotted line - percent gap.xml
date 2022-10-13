@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <distortionPreset>
 	<version>1</version>
-	<code>waveOut = ((triangle(d/period)) + 1) * 0.5;
-pscale = waveOut &gt; percentGap ? 1 : minPressureScale;
+	<code>offset = (percentGap - 0.5) * 0.5;
+wave = ((triangle((d/period) + offset)) + 1) * 0.5;
+pscale = wave &gt; percentGap ? 1 : minPressureScale;
 op = p * pscale;</code>
 	<params>
 		<param>

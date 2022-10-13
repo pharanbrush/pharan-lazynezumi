@@ -2,10 +2,10 @@
 <distortionPreset>
 	<version>1</version>
 	<code>period = line + gap;
-percent = gap / period;
+percentGap = gap / period;
 offset = (percentGap - 0.5) * 0.5;
 wave = ((triangle((d/period) + offset)) + 1) * 0.5;
-pscale = wave &gt; percent ? 1 : minPressureScale;
+pscale = wave &gt; percentGap ? 1 : minPressureScale;
 op = p * pscale;</code>
 	<params>
 		<param>

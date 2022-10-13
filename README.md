@@ -49,7 +49,9 @@ Use **dotted line** to make dotted lines.
 
 ### wobble - jagged
 ![](docimg/scripts-wobble-jagged.gif)  
-Use **wobble** to mimic drawing on an uneven surface.
+~~Use **wobble** to mimic drawing on an uneven surface.~~ (deprecated. Please use **unstraighten - rocky surface**)
+
+
 
 ### unstraighten - slight wobble
 ![](docimg/scripts-unstraighten-slightwobble.gif)  

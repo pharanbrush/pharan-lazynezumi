@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>ota = mix(ta, tiltAngle / 360.0, tiltAngleOverride);
+ote = mix(te, tiltElevation, tiltElevationOverride);</code>
+	<params>
+		<param>
+			<name>tiltAngleOverride</name>
+			<defaultVal>1</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+			<decimals>2</decimals>
+			<color>#8CCB6E</color>
+			<toolTip>Enables or disables overriding the tilt angle. Numbers between 0 and 1 will mix the actual angle of your pen with the angle you specified.</toolTip>
+		</param>
+		<param>
+			<name>tiltAngle</name>
+			<defaultVal>90</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>360</maxVal>
+			<decimals>1</decimals>
+			<color>#8CCB6E</color>
+			<toolTip/>
+		</param>
+		<param>
+			<name>tiltElevationOverride</name>
+			<defaultVal>0</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+			<decimals>2</decimals>
+			<color>#50D6FF</color>
+			<toolTip>Enables or disables overriding the tilt elevation. Numbers between 0 and 1 will mix the actual tilt elevation of your pen with the tilt elevation you specified.</toolTip>
+		</param>
+		<param>
+			<name>tiltElevation</name>
+			<defaultVal>0</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1024</maxVal>
+			<decimals>0</decimals>
+			<color>#50D6FF</color>
+			<toolTip/>
+		</param>
+	</params>
+</distortionPreset>

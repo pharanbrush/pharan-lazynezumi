@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<distortionPreset>
+	<version>1</version>
+	<code>op = clamp(0, 1, p * pressureScale);</code>
+	<params>
+		<param>
+			<name>pressureScale</name>
+			<defaultVal>3</defaultVal>
+			<minVal>0.1</minVal>
+			<maxVal>8</maxVal>
+			<decimals>1</decimals>
+			<color/>
+			<toolTip/>
+		</param>
+	</params>
+</distortionPreset>

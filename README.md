@@ -47,14 +47,16 @@ Use **dotted line** to make dotted lines.
 > LNP or your drawing program may apply some pressure smoothing so drawing too quickly may yield incorrect results.
 
 
-### wobble - jagged
-![](docimg/scripts-wobble-jagged.gif)  
-~~Use **wobble** to mimic drawing on an uneven surface.~~ (deprecated. Please use **unstraighten - rocky surface**)
-
-
-
 ### unstraighten - slight wobble
 ![](docimg/scripts-unstraighten-slightwobble.gif)  
 Use **unstraighten** to add a slight wobble to lines and shapes.
 
 
+### unstraighten - rocky surface
+![](docimg/scripts-wobble-jagged.gif)  
+Also try **rocky surface** for a more jagged look.
+
+
+### pressure - pressure multiplier
+![](docimg/scripts-pressure-pressuremultiplier.gif)  
+If your pen pressure settings don't agree with the calibration of a certain brush for what you need it to do, use **pressure multiplier** to temporarily harden or soften your pressure.

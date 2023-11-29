@@ -60,3 +60,9 @@ Also try **rocky surface** for a more jagged look.
 ### pressure - pressure multiplier
 ![](docimg/scripts-pressure-pressuremultiplier.gif)  
 If your pen pressure settings don't agree with the calibration of a certain brush for what you need it to do, use **pressure multiplier** to temporarily harden or soften your pressure.
+
+---
+
+If you're a digital artist on Windows and you don't have Lazy Nezumi Pro yet, go check it out!
+Use my affiliate link so they know I sent you: https://lazynezumi.com/?ai=pharan
+(I don't get a kickback but if the numbers are nice, maybe I get to pester them about it. 🥳)

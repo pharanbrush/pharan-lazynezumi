@@ -4,7 +4,7 @@
 	<code>op = p &gt; 0 ? clamp(0, 1, fixedPressure) : 0;</code>
 	<params>
 		<param>
-			<name>pressureScale</name>
+			<name>fixedPressure</name>
 			<defaultVal>1</defaultVal>
 			<minVal>0.01</minVal>
 			<maxVal>1</maxVal>

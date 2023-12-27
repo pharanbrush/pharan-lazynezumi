@@ -16,8 +16,7 @@ op = p == 0 ? 0 : p * pressureScale;</code>
 	<params>
 		<param>
 			<name>wobble_size</name>
-			<value>80</value>
-			<defaultVal>70</defaultVal>
+			<defaultVal>80</defaultVal>
 			<minVal>1</minVal>
 			<maxVal>600</maxVal>
 			<decimals>0</decimals>
@@ -26,7 +25,6 @@ op = p == 0 ? 0 : p * pressureScale;</code>
 		</param>
 		<param>
 			<name>wobble_strength_percent</name>
-			<value>1</value>
 			<defaultVal>1</defaultVal>
 			<minVal>0</minVal>
 			<maxVal>1.5</maxVal>
@@ -36,7 +34,6 @@ op = p == 0 ? 0 : p * pressureScale;</code>
 		</param>
 		<param>
 			<name>second_layer_weight</name>
-			<value>0.5</value>
 			<defaultVal>0.5</defaultVal>
 			<minVal>0</minVal>
 			<maxVal>1</maxVal>
@@ -46,7 +43,6 @@ op = p == 0 ? 0 : p * pressureScale;</code>
 		</param>
 		<param>
 			<name>second_layer_scale</name>
-			<value>0.730000019</value>
 			<defaultVal>0.730000019</defaultVal>
 			<minVal>0.0199999996</minVal>
 			<maxVal>1.79999995</maxVal>

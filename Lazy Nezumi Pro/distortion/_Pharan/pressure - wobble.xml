@@ -3,8 +3,15 @@
 	<version>1</version>
 	<code>seed = (seed == 0) ? srand() * 100 : seed;
 progress = seed + d;
-		
-pressureScale = 1 - (wobble_strength_percent * noise(progress/wobble_size));
+t = progress/wobble_size;
+
+firstPressureScale = noise(t);
+secondPressureScale = noise(t / second_layer_scale);
+first_layer_weight = 1 - second_layer_weight;
+combinedNoise = (secondPressureScale * second_layer_weight) + (firstPressureScale * first_layer_weight);
+
+pressureScale = 1 - (wobble_strength_percent * combinedNoise);
+
 op = p == 0 ? 0 : p * pressureScale;</code>
 	<params>
 		<param>
@@ -19,13 +26,33 @@ op = p == 0 ? 0 : p * pressureScale;</code>
 		</param>
 		<param>
 			<name>wobble_strength_percent</name>
-			<value>0.800000012</value>
-			<defaultVal>0.800000012</defaultVal>
+			<value>1</value>
+			<defaultVal>1</defaultVal>
 			<minVal>0</minVal>
-			<maxVal>1</maxVal>
+			<maxVal>1.5</maxVal>
 			<decimals>2</decimals>
 			<color/>
 			<toolTip>The maximum percent the pressure can be scaled down by. (pressure is scaled by: 100% - wobble_strength_percent)</toolTip>
+		</param>
+		<param>
+			<name>second_layer_weight</name>
+			<value>0.5</value>
+			<defaultVal>0.5</defaultVal>
+			<minVal>0</minVal>
+			<maxVal>1</maxVal>
+			<decimals>1</decimals>
+			<color/>
+			<toolTip>The weight applied to a second noise layer. If this is either 0 or 1, the wobble will look more regularly-spaced. </toolTip>
+		</param>
+		<param>
+			<name>second_layer_scale</name>
+			<value>0.730000019</value>
+			<defaultVal>0.730000019</defaultVal>
+			<minVal>0.0199999996</minVal>
+			<maxVal>1.79999995</maxVal>
+			<decimals>2</decimals>
+			<color/>
+			<toolTip>The spatial scale of the second noise layer, relative to the first noise layer. If this is set very low, it will add a high-frequency noise. Rational numbers may cause a visible pattern.</toolTip>
 		</param>
 	</params>
 </distortionPreset>

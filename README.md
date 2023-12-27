@@ -59,7 +59,14 @@ Also try **rocky surface** for a more jagged look.
 
 ### pressure - pressure multiplier
 ![](docimg/scripts-pressure-pressuremultiplier.gif)  
-If your pen pressure settings don't agree with the calibration of a certain brush for what you need it to do, use **pressure multiplier** to temporarily harden or soften your pressure.
+If your pen pressure settings don't agree with the calibration of a certain brush for what you need it to do, use **pressure multiplier** to temporarily harden or soften your pressure.  
+
+
+### pressure - wobble
+![](docimg/scripts-pressure-wobble.png) 
+![](docimg/scripts-pressure-wobble.gif)  
+Use this script to achieve a loose-ink/melty-crayon/Flash brush look. The "size" parameter gives you more flexibility vs the noise provided by most painting software.
+
 
 ---
 

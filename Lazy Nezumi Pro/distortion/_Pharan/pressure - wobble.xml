@@ -16,10 +16,10 @@ op = p == 0 ? 0 : p * pressureScale;</code>
 	<params>
 		<param>
 			<name>wobble_size</name>
-			<value>70</value>
+			<value>80</value>
 			<defaultVal>70</defaultVal>
 			<minVal>1</minVal>
-			<maxVal>200</maxVal>
+			<maxVal>600</maxVal>
 			<decimals>0</decimals>
 			<color/>
 			<toolTip>The spatial interval used by the pressure noise in pixels. Smaller values cause more jittery or blobby noise. Larger values look more inky.</toolTip>

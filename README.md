@@ -65,7 +65,9 @@ If your pen pressure settings don't agree with the calibration of a certain brus
 ### pressure - wobble
 ![](docimg/scripts-pressure-wobble.png) 
 ![](docimg/scripts-pressure-wobble.gif)  
-Use this script to achieve a loose-ink/melty-crayon/Flash brush look. The "size" parameter gives you more flexibility vs the noise provided by most painting software.
+Use this script to achieve a loose-ink/melty-crayon/Flash brush look. This works well for brushes that only affect the size based on pressure and not the opacity.
+
+ The "size" parameter gives you more flexibility vs the noise provided by most painting software.
 
 
 ---

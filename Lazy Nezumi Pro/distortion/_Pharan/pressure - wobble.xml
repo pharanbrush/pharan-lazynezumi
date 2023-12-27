@@ -2,10 +2,10 @@
 <distortionPreset>
 	<version>1</version>
 	<code>seed = (seed == 0) ? srand() * 100 : seed;
-		progress = seed + d;
+progress = seed + d;
 		
-		pressureScale = 1 - (wobble_strength_percent * noise(progress/wobble_size));
-		op = p == 0 ? 0 : p * pressureScale;</code>
+pressureScale = 1 - (wobble_strength_percent * noise(progress/wobble_size));
+op = p == 0 ? 0 : p * pressureScale;</code>
 	<params>
 		<param>
 			<name>wobble_size</name>

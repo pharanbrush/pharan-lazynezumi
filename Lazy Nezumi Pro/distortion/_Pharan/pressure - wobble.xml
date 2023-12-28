@@ -2,13 +2,13 @@
 <distortionPreset>
 	<version>1</version>
 	<code>seed = (seed == 0) ? srand() * 100 : seed;
-progress = seed + d;
-t = progress/wobble_size;
+t = (seed + d)/wobble_size;
 
-firstPressureScale = noise(t);
-secondPressureScale = noise(t / second_layer_scale);
-first_layer_weight = 1 - second_layer_weight;
-combinedNoise = (secondPressureScale * second_layer_weight) + (firstPressureScale * first_layer_weight);
+noise1 = noise(t);
+noise2 = noise(t / second_layer_scale);
+
+firstLayerWeight = 1 - second_layer_weight;
+combinedNoise = (noise2 * second_layer_weight) + (noise1 * firstLayerWeight);
 
 pressureScale = 1 - (wobble_strength_percent * combinedNoise);
 

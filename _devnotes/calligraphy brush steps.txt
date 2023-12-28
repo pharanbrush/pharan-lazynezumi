@@ -1,0 +1,28 @@
+// This script makes the brush shape tilt slightly toward the direction the line is going.
+// Set the brush to respond to pen tilt angle so we can manipulate it using that.
+// The angle tilt is more subtle when pressing down normally, and tilts fully when the pressure is light.
+// This tilt behavior 
+
+
+//Line Angle
+//Get the angle based on the line direction
+//Offset this angle with a user-custom angle
+//This is the angle the brush tip wants to go based on its movement.
+
+lineAngle = GetAngleFromLineDirection(lineDirection);
+
+
+// Target Angle
+minStiffness = 0.1;
+maxStiffness = 0.7;
+stiffness = Mix(minStiffness, maxStiffness, inputPenPressure);
+targetAngle = MixAngle(lineAngle, inputTiltAngle, stiffness);
+
+
+// Angle Smoothing
+// Store the current angle and make it move towards the target angle every frame
+// to prevent artifacts when the brush turns.
+turnProportion = 0.4;
+currentAngle = MixAngle(currentAngle, targetAngle, turnProportion);
+
+

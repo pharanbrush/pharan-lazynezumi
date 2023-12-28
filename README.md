@@ -2,41 +2,24 @@
 Some customization and scripts I made for Lazy Nezumi Pro (LNP)
 
 
-# Icon Set
-## How to install an icon set to LNP
-As of **Lazy Nezumi Pro Version 22.10.05.2045**:
-
-Each icon set is a folder containing png files for each icon.
-
-Copy the folder containing the icon pngs into the folder named `icons` inside the LNP install folder.
-
-By default, this is `C:\Program Files (x86)\Lazy Nezumi Pro\icons\` .
-
-In the main window of Lazy Nezumi Pro, choose `Settings > Toolbar Settings > Edit toolbar.xml`. This will open the settings file in your text editor. 
-
-Change the value inside the `<iconfolder>` tag to the folder you want.
-
-For example: `<iconfolder>icons/yournewiconpackfolder</iconfolder>` .
-
-Save the file. You may need to close and open LNP again for it to fully take effect.
-
-## Pharan's LNP Icon Set
-![](docimg/iconset-pharan.png)  
-It looks like this.  
-
-
 # Scripts
+### How to download individual scripts
+
+If you want to download individual xml files from Github, open the link to the specific file, then choose "Download raw file" option:
+![Alt text](docimg/download-raw-file-github.png)
+
 ## How to install scripts in LNP
 As of **Lazy Nezumi Pro Version 22.10.05.2045**:
 
 Each script is an `.xml` file.
 The name of the script you select in the LNP interface comes from the filename.
 
-Copy the scripts (.xml files) and paste it into the folder named `distortion` inside the LNP install folder.
+**Copy the scripts (.xml files) and paste it into a subfolder in the folder named `distortion` inside the LNP install folder.**
 
-By default, this is `C:\Program Files (x86)\Lazy Nezumi Pro\distortion\` .
+The install folder is usually `C:\Program Files (x86)\Lazy Nezumi Pro\distortion\`
 
-There are already subfolders inside the `distortion` folder for each category. Make your own subfolder. The name will be used as the heading in the script list.
+There are already subfolders inside the `distortion` folder for each category. Make your own subfolder. The folder name will be used as the heading in the script list.
+
 
 
 ## Pharan's LNP Scripts
@@ -69,6 +52,30 @@ Use this script to achieve a loose-ink/melty-crayon/Flash brush look. This works
 
  The "size" parameter gives you more flexibility vs the noise provided by most painting software.
 
+
+
+---
+# Icon Set
+## How to install an icon set to LNP
+As of **Lazy Nezumi Pro Version 22.10.05.2045**:
+
+Each icon set is a folder containing png files for each icon.
+
+Copy the folder containing the icon pngs into the folder named `icons` inside the LNP install folder.
+
+By default, this is `C:\Program Files (x86)\Lazy Nezumi Pro\icons\` .
+
+In the main window of Lazy Nezumi Pro, choose `Settings > Toolbar Settings > Edit toolbar.xml`. This will open the settings file in your text editor. 
+
+Change the value inside the `<iconfolder>` tag to the folder you want.
+
+For example: `<iconfolder>icons/yournewiconpackfolder</iconfolder>` .
+
+Save the file. You may need to close and open LNP again for it to fully take effect.
+
+## Pharan's LNP Icon Set
+![](docimg/iconset-pharan.png)  
+It looks like this.  
 
 ---
 

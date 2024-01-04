@@ -28,54 +28,49 @@ ox = x + nx * offset;
 oy = y + ny * offset;
 
 
-
-
-
-
-
-        <param>
-            <name>zoom_scale</name>
-            <value>1</value>
-            <defaultVal>1</defaultVal>
-            <minVal>0.00999999978</minVal>
-            <maxVal>4</maxVal>
-            <decimals>2</decimals>
-            <color/>
-            <toolTip>Adjustment factor for the wobble pixel size in case you need to zoom into your canvas.</toolTip>
-        </param>
-		<param>
-            <name>pressure_wobble_size</name>
-            <defaultVal>80</defaultVal>
-            <minVal>1</minVal>
-            <maxVal>600</maxVal>
-            <decimals>0</decimals>
-            <color/>
-            <toolTip>The spatial interval used by the pressure noise in pixels. Smaller values cause more jittery or blobby noise. Larger values look more inky.</toolTip>
-        </param>
-        <param>
-            <name>pressure_wobble_percent</name>
-            <defaultVal>0.85</defaultVal>
-            <minVal>0.00999999978</minVal>
-            <maxVal>1.5</maxVal>
-            <decimals>2</decimals>
-            <color/>
-            <toolTip>The maximum percent the pressure can be scaled down by.</toolTip>
-        </param>
-        <param>
-            <name>position_wobble_amplitude</name>
-            <defaultVal>0.35</defaultVal>
-            <minVal>-1.70000005</minVal>
-            <maxVal>1.70000005</maxVal>
-            <decimals>2</decimals>
-            <color/>
-            <toolTip>The maximum amount of position wobble in pixels.</toolTip>
-        </param>
-        <param>
-            <name>scale_with_pressure</name>
-            <defaultVal>0</defaultVal>
-            <minVal>0</minVal>
-            <maxVal>1</maxVal>
-            <decimals>0</decimals>
-            <color/>
-            <toolTip>If 1, the position wobble will scale based on pressure.</toolTip>
-        </param>
+// <param>
+//     <name>zoom_scale</name>
+//     <value>1</value>
+//     <defaultVal>1</defaultVal>
+//     <minVal>0.00999999978</minVal>
+//     <maxVal>4</maxVal>
+//     <decimals>2</decimals>
+//     <color/>
+//     <toolTip>Adjustment factor for the wobble pixel size in case you need to zoom into your canvas.</toolTip>
+// </param>
+// <param>
+//     <name>pressure_wobble_size</name>
+//     <defaultVal>80</defaultVal>
+//     <minVal>1</minVal>
+//     <maxVal>600</maxVal>
+//     <decimals>0</decimals>
+//     <color/>
+//     <toolTip>The spatial interval used by the pressure noise in pixels. Smaller values cause more jittery or blobby noise. Larger values look more inky.</toolTip>
+// </param>
+// <param>
+//     <name>pressure_wobble_percent</name>
+//     <defaultVal>0.85</defaultVal>
+//     <minVal>0.00999999978</minVal>
+//     <maxVal>1.5</maxVal>
+//     <decimals>2</decimals>
+//     <color/>
+//     <toolTip>The maximum percent the pressure can be scaled down by.</toolTip>
+// </param>
+// <param>
+//     <name>position_wobble_amplitude</name>
+//     <defaultVal>0.35</defaultVal>
+//     <minVal>-1.70000005</minVal>
+//     <maxVal>1.70000005</maxVal>
+//     <decimals>2</decimals>
+//     <color/>
+//     <toolTip>The maximum amount of position wobble in pixels.</toolTip>
+// </param>
+// <param>
+//     <name>scale_with_pressure</name>
+//     <defaultVal>0</defaultVal>
+//     <minVal>0</minVal>
+//     <maxVal>1</maxVal>
+//     <decimals>0</decimals>
+//     <color/>
+//     <toolTip>If 1, the position wobble will scale based on pressure.</toolTip>
+// </param>

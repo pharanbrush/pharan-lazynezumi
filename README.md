@@ -78,6 +78,16 @@ Save the file. You may need to close and open LNP again for it to fully take eff
 It looks like this.  
 
 ---
+# Macro Pad Button Image Set
+Button images for a macropad that has key displays.  
+
+![](docimg/macropad-preview.png)  
+Sample of button images shown on a Mountain DisplayPad.
+
+
+
+
+---
 
 If you're a digital artist on Windows and you don't have Lazy Nezumi Pro yet, go check it out!
 Use my affiliate link so they know I sent you: https://lazynezumi.com/?ai=pharan

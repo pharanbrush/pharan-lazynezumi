@@ -1,11 +1,14 @@
+//
 seed = (seed == 0) ? srand() * 100 : seed;
 progress = seed + d;
-t = progress/(pressure_wobble_size * zoom_scale);
+wobbleSize = pressure_wobble_size * zoom_scale;
+t = progress/wobbleSize;
 
 secondLayerWeight = 0.4;
 secondLayerScale = 0.73;
+secondLayerOffset = 0.3 * wobbleSize;
 firstPressureScale = noise(t);
-secondPressureScale = noise(t / secondLayerScale);
+secondPressureScale = noise(secondLayerOffset + (t / secondLayerScale));
 firstLayerWeight = 1 - secondLayerWeight;
 combinedNoise = (secondPressureScale * secondLayerWeight) + (firstPressureScale * firstLayerWeight);
 
@@ -26,7 +29,7 @@ s3 = noise(noiseNumerator/period3);
 offset = sz * (position_wobble_amplitude * (s1 + s2 + s3));
 ox = x + nx * offset;
 oy = y + ny * offset;
-
+//
 
 // <param>
 //     <name>zoom_scale</name>

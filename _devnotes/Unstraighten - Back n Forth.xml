@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<positionCatchUp>true</positionCatchUp>
+<positionMode>1</positionMode>
+<positionStringLength>35</positionStringLength>
+<positionNumSamples>57</positionNumSamples>
+<positionSmoothingFactor>0.0500000007</positionSmoothingFactor>
+<positionMass>31.25</positionMass>
+<positionDrag>0.200000003</positionDrag>
+<pressureSoftness>0</pressureSoftness>
+<pressureGain>1</pressureGain>
+<pressureInvert>false</pressureInvert>
+<pressureMinVal>0</pressureMinVal>
+<pressureMaxVal>1</pressureMaxVal>
+<pressureMode>2</pressureMode>
+<pressureFixedValue>0.219999999</pressureFixedValue>
+<pressureSampleHoldValue>15</pressureSampleHoldValue>
+<pressureNumSamples>3</pressureNumSamples>
+<pressureSmoothingFactor>0</pressureSmoothingFactor>
+<pressureSpeedEnabled>false</pressureSpeedEnabled>
+<pressureSpeedFastGain>1</pressureSpeedFastGain>
+<pressureSpeedSlowGain>1</pressureSpeedSlowGain>
+<pressureFastSpeed>500</pressureFastSpeed>
+<pressureSpeedSmoothingFactor>0</pressureSpeedSmoothingFactor>
+<positionProcessingEnabled>false</positionProcessingEnabled>
+<pressureProcessingEnabled>false</pressureProcessingEnabled>
+<pressureCurveEnabled>false</pressureCurveEnabled>
+<orientationProcessingEnabled>false</orientationProcessingEnabled>
+<orientationSmoothingFactor>0</orientationSmoothingFactor>
+<distortionCode>//
+seed = (seed == 0) ? srand() * 100 : seed;
+progress = seed + d;
+t = progress / (wobble_size *  zoom_scale);
+
+backwardOffsetPressureScale = 0.2;
+
+forwardLength = length(dx, dy);
+
+angleThreshold = 0.5;
+
+
+okAngle = abs(dAngle) &lt; angleThreshold ? 1 : 0;
+okDistance = forwardLength &gt; speed_threshold ? 1 : 0;
+okOffset = okAngle * okDistance;
+
+
+noiseT = noise(t);
+sinT = sin(t);
+forwardOffset = (noiseT) * segment_size * zoom_scale;
+sidewaysOffset = noiseT * sideways_inaccuracy * zoom_scale;
+
+forwardAngle = atan2(dy, dx);
+rotRad(forwardOffset, sidewaysOffset, forwardAngle);
+xOffset = res0 * okOffset;
+yOffset = res1 * okOffset;
+
+
+ox = x + xOffset;
+oy = y + yOffset;
+
+op = (okOffset == 0) ? p : (dForward &lt; -0.5) ? (p * backwardOffsetPressureScale) : mix(p, p * ((noiseT + 1) * 0.5), 0.1);
+
+
+dForward = forwardOffset - lastForwardOffset;
+lastForwardOffset = forwardOffset;
+
+dAngle = minArcRad(forwardAngle, lastForwardAngle);
+lastForwardAngle = forwardAngle;</distortionCode>
+<distortionPreset>&lt;custom&gt;</distortionPreset>
+<distortionEnabled>true</distortionEnabled>
+<guideCircle>true</guideCircle>
+<guideLine>false</guideLine>
+<guideColor>#05bdff</guideColor>
+<rulersEnabled>false</rulersEnabled>
+<rulersMode>0</rulersMode>
+<rulerAccuracy>1</rulerAccuracy>
+<rulerTickDistance>100</rulerTickDistance>
+<ellipseDegree>90</ellipseDegree>
+<ellipseRotation>0</ellipseRotation>
+<ellipseConnectEnds>true</ellipseConnectEnds>
+<ellipseRadialLine>false</ellipseRadialLine>
+<ellipseMagneticTicks>false</ellipseMagneticTicks>
+<ellipseBoxMode>0</ellipseBoxMode>
+<ellipseCenterPSCanvas>0 0 </ellipseCenterPSCanvas>
+<distortionCustomParams>
+    <param>
+        <name>segment_size</name>
+        <value>80</value>
+        <defaultVal>20</defaultVal>
+        <minVal>0</minVal>
+        <maxVal>80</maxVal>
+        <decimals>0</decimals>
+        <color/>
+        <toolTip/>
+    </param>
+    <param>
+        <name>sideways_inaccuracy</name>
+        <value>0</value>
+        <defaultVal>0</defaultVal>
+        <minVal>0</minVal>
+        <maxVal>1</maxVal>
+        <decimals>1</decimals>
+        <color/>
+        <toolTip/>
+    </param>
+    <param>
+        <name>speed_threshold</name>
+        <value>0.600000024</value>
+        <defaultVal>0.600000024</defaultVal>
+        <minVal>0</minVal>
+        <maxVal>2</maxVal>
+        <decimals>1</decimals>
+        <color/>
+        <toolTip/>
+    </param>
+    <param>
+        <name>wobble_size</name>
+        <value>20</value>
+        <defaultVal>20</defaultVal>
+        <minVal>0</minVal>
+        <maxVal>40</maxVal>
+        <decimals>0</decimals>
+        <color/>
+        <toolTip/>
+    </param>
+    <param>
+        <name>zoom_scale</name>
+        <value>0.5</value>
+        <defaultVal>1</defaultVal>
+        <minVal>0</minVal>
+        <maxVal>4</maxVal>
+        <decimals>2</decimals>
+        <color/>
+        <toolTip/>
+    </param>
+</distortionCustomParams>

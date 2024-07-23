@@ -2,7 +2,7 @@
 <distortionPreset>
 	<version>1</version>
 	<code>//
-tOffset = (tOffset == 0) ? srand() * 100 : tOffset;
+tOffset = (tOffset == 0) ? srand() * 1000 : tOffset;
 progress = tOffset + d;
 wobbleSize = pressure_wobble_size * zoom_scale;
 t = progress/wobbleSize;

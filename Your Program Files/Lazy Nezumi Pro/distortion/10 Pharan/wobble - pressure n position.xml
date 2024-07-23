@@ -2,8 +2,8 @@
 <distortionPreset>
 	<version>1</version>
 	<code>//
-seed = (seed == 0) ? srand() * 100 : seed;
-progress = seed + d;
+tOffset = (tOffset == 0) ? srand() * 100 : tOffset;
+progress = tOffset + d;
 wobbleSize = pressure_wobble_size * zoom_scale;
 t = progress/wobbleSize;
 
@@ -24,7 +24,7 @@ period2 = 170;
 period3 = 200;
 
 sz = scale_with_pressure == 1 ? p : 1;
-twopid = 2 * pi * d;
+twopid = 2 * pi * progress;
 noiseNumerator = twopid / zoom_scale;
 s1 = noise(noiseNumerator/period1);
 s2 = noise(noiseNumerator/period2);

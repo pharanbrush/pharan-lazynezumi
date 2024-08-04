@@ -1,0 +1,184 @@
+<variables>
+// ClassicOrange V1 theme for LNP's toolbar. Min LNP version: 23.10.xx
+
+// For this style, images are all loaded from the internal resource (:/)
+@themeImages@	= :/images/ClassicOrange
+@toolbarImages@ = :/images/toolbar
+
+@windowBorder@	= #222222
+@borderDark@	= #111
+@borderLight@	= #666
+@buttonBorder@	= #1e1e1e
+@separator@		= #2a2a2a
+@background@	= #535353
+@text@			= white
+
+// Highlight color
+@highlight@		= hsv(32, 208, 131)
+@highlightDark@ = hsv(32, 208, 83)
+
+// Button gradients
+@buttonHoverGradient@ = QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 hsv(@buttonHueSat@, 120), stop: 0.5 hsv(@buttonHueSat@, 80), stop: 1 hsv(@buttonHueSat@, 70))
+@buttonPressedGradient@ = QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 hsv(@buttonHueSat@, 32), stop: 0.5 hsv(@buttonHueSat@, 55), stop: 1 hsv(@buttonHueSat@, 60))
+@buttonHueSat@ = 0,0
+
+</variables>
+
+QFrame
+{
+	background-color: @separator@;
+	margin: 2px;
+}
+QWidget#widgetTopBar
+{
+	border: 1px solid @windowBorder@;
+}
+QWidget#widgetTopBar[orient='horizontal']
+{
+	background-color: QLinearGradient(x1:0, y1:0, x2:1, y2:0, stop: 0 hsv(@buttonHueSat@, 150), stop: 0.11 hsv(@buttonHueSat@, 70), stop: 0.5 hsv(@buttonHueSat@, 60), stop: 1 hsv(@buttonHueSat@, 35));
+	border-right-color: @borderDark@;
+}
+QWidget#widgetTopBar[orient='vertical']
+{
+	background-color: QLinearGradient(x1:0, y1:0, x2:0, y2:1, stop: 0 hsv(@buttonHueSat@, 150), stop: 0.11 hsv(@buttonHueSat@, 70), stop: 0.5 hsv(@buttonHueSat@, 60), stop: 1 hsv(@buttonHueSat@, 35));
+	border-bottom-color: @borderDark@;
+}
+QWidget#widgetFrame
+{
+	background-color: @background@;
+	border: 1px solid @windowBorder@;
+}
+QWidget#widgetFrame[orient='horizontal']
+{
+	border-left-width: 1px;
+	border-left-color: @borderLight@;
+}
+QWidget#widgetFrame[orient='vertical']
+{
+	border-top-width: 1px;
+	border-top-color: @borderLight@;
+}
+QPushButton[popup='0'],
+QLabel,
+QPushButton#buttonClose,
+QPushButton#buttonLayout
+{
+	background-color: transparent;
+	border-width: 0px;
+	border-radius: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+QPushButton:checked:disabled[popup='0']
+{
+	background-color: transparent;
+}
+QPushButton:pressed[popup='0'],
+QPushButton:checked[popup='0']
+{
+	background-color: @buttonPressedGradient@;
+	border: 1px solid @buttonBorder@;
+	border-radius: 3px;
+}
+QPushButton:hover:!checked[popup='0']
+{
+	background-color: @buttonHoverGradient@;
+	border: 1px solid @buttonBorder@;
+	border-radius: 3px;
+}
+
+QPushButton#buttonClose:hover { image: url(@toolbarImages@/closeh%1.png); }
+QPushButton#buttonClose:!hover { image: url(@toolbarImages@/close%1.png); }
+
+QPushButton#buttonLayout:hover[layout='0'] { image: url(@toolbarImages@/layout2Ch%1.png); }
+QPushButton#buttonLayout:hover[layout='1'] { image: url(@toolbarImages@/layout1Rh%1.png); }
+QPushButton#buttonLayout:hover[layout='2'] { image: url(@toolbarImages@/layout2Rh%1.png); }
+QPushButton#buttonLayout:hover[layout='3'] { image: url(@toolbarImages@/layout1Ch%1.png); }
+QPushButton#buttonLayout:!hover[layout='0'] { image: url(@toolbarImages@/layout2C%1.png); }
+QPushButton#buttonLayout:!hover[layout='1'] { image: url(@toolbarImages@/layout1R%1.png); }
+QPushButton#buttonLayout:!hover[layout='2'] { image: url(@toolbarImages@/layout2R%1.png); }
+QPushButton#buttonLayout:!hover[layout='3'] { image: url(@toolbarImages@/layout1C%1.png); }
+
+QLabel#labelGrabh { image: url(@toolbarImages@/grabh%1.png); }
+QLabel#labelGrabv { image: url(@toolbarImages@/grabv%1.png); }
+
+QPushButton#buttonClose:hover:!pressed[orient='vertical'],
+QPushButton#buttonClose:hover:pressed[orient='vertical'],
+QPushButton#buttonLayout:hover:!pressed[orient='vertical'],
+QPushButton#buttonLayout:hover:pressed[orient='vertical']
+{
+	border-bottom-color: transparent;
+}
+QPushButton#buttonClose:hover:!pressed[orient='horizontal'],
+QPushButton#buttonClose:hover:pressed[orient='horizontal'],
+QPushButton#buttonLayout:hover:!pressed[orient='horizontal'],
+QPushButton#buttonLayout:hover:pressed[orient='horizontal']
+{
+	border-right-color: transparent;
+}
+QPushButton#buttonClose:hover:!pressed,
+QPushButton#buttonLayout:hover:!pressed
+{
+	background-color: @buttonHoverGradient@;
+	border: 1px solid @windowBorder@;	
+}
+QPushButton#buttonClose:hover:pressed,
+QPushButton#buttonLayout:hover:pressed
+{
+	background-color: transparent;
+	border: 1px solid @windowBorder@;
+}
+QPushButton#buttonEnable
+{
+	padding: 0px;
+	padding-top: 2px;
+	margin: 0px;
+	border: 0px solid black;
+	background-color: transparent;
+	image: url(@themeImages@/power.png);
+}
+QPushButton#buttonEnable:hover
+{
+	padding: 0px;
+	padding-top: 2px;
+	margin: 0px;
+	border: 0px solid black;
+	background-color: transparent;
+	image: url(@themeImages@/power_hover.png);
+}
+QPushButton#buttonEnable:checked,
+QPushButton#buttonEnable:pressed
+{
+	padding: 0px;
+	padding-top: 2px;
+	margin: 0px;
+	border: 0px solid black;
+	background-color: transparent;
+	image: url(@themeImages@/power_pressed.png);
+}
+/* preset list popups */
+QWidget[lnp_toolbar_group='true']
+{
+	background-color: @background@;
+	color: @text@;
+	margin: 0px;
+	border: 1px solid @windowBorder@;
+}
+QPushButton[popup='1']
+{
+	background-color: transparent;
+	border-width: 0px;
+	border-radius: 0;
+	margin: 0px;
+	padding: 0.0em 0.35em 0.0em 0.15em;
+	text-align: left;
+}
+QPushButton:checked[popup='1']
+{
+	background-color: @highlightDark@;
+}
+QPushButton:pressed[popup='1'],
+QPushButton:hover[popup='1']
+{
+	background-color: @highlight@;
+}

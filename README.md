@@ -78,6 +78,22 @@ Save the file. You may need to close and open LNP again for it to fully take eff
 It looks like this.  
 
 ---
+# PharanOrange theme
+Lower-contrast orange theme for the main window.  
+![](docimg/theme-pharanorange.png)  
+
+## How to install and use a theme in LNP
+As of **Lazy Nezumi Pro Version 24.07.20.1418**:
+Each theme is a folder containing png and qss files. These files define the styling of the theme and the images it uses.  
+
+1. Copy the folder containing the theme files (eg, the PharanOrange folder).
+2. Navigate to `%localappdata%\Lazy Nezumi Pro\themes` (paste that into the address bar of File Explorer).
+3. Paste the folder (eg, PharanOrange) into this themes folder.
+4. Open Lazy Nezumi Pro. Or restart LNP if it was already open.
+5. Go to Settings > Theme > choose your theme (eg, PharanOrange)
+
+
+---
 # Macro Pad Button Image Set
 Button images for a macropad that has key displays.  
 

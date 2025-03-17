@@ -9,18 +9,26 @@ If you want to download individual xml files from Github, open the link to the s
 ![Alt text](docimg/download-raw-file-github.png)
 
 ## How to install scripts in LNP
-As of **Lazy Nezumi Pro Version 22.10.05.2045**:
+As of **Lazy Nezumi Pro Version 24.10.03.xxxx**:
 
 Each script is an `.xml` file.
 The name of the script you select in the LNP interface comes from the filename.
 
-**Copy the scripts (.xml files) and paste it into a subfolder in the folder named `distortion` inside the LNP install folder.**
+**Put the scripts (.xml files) in a folder, copy the folder, and paste the folder into LNP's user scripts folder.**
 
-The install folder is usually `C:\Program Files (x86)\Lazy Nezumi Pro\distortion\`
+1. Put the scripts (.xml files) in a folder. Copy the folder. Then paste that folder into LNP's user scripts folder.
 
-There are already subfolders inside the `distortion` folder for each category. Make your own subfolder. The folder name will be used as the heading in the script list.
+2. To find the user scripts folder, enter this path into the File explorer address bar:  
+`%LocalAppData%\Lazy Nezumi Pro\scripts`
 
+3. In the end, the path where you can find your scripts should look something like:  
+`...\Lazy Nezumi Pro\scripts\Pharan` where `Pharan` is the name of your folder with your scripts in it.
 
+![](/docimg/localappdata_lnp_scripts_folder.png)
+
+Once you close and open LNP again, it should list the scripts under the **Scripting** section.
+
+![](/docimg/pharan_scripts_lnp_ui.png)
 
 ## Pharan's LNP Scripts
 ### dotted line
